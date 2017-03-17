@@ -1,0 +1,21 @@
+version: "3"
+services:
+  voltdb1:
+    image: voltdb/voltdb-community
+    container_name: boltdb-node1
+    tty: true
+    environment:
+      - HOST_COUNT=2
+      - HOSTS=boltdb-node1,boltdb-node2
+
+  voltdb2:
+      image: voltdb/voltdb-community
+      container_name: boltdb-node2
+      tty: true
+      environment:
+        - HOST_COUNT=2
+        - HOSTS=boltdb-node1,boltdb-node2
+  go:
+    image: golang
+    container_name: go
+    tty: true
