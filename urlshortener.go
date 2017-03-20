@@ -2,15 +2,15 @@ package main
 
 import (
 	"github.com/jessevdk/go-flags"
-	"urlshortener/cmd"
 	"os"
+	"urlshortener/cmd"
 )
 
 func main() {
 
+	initLogger(true)
 	parser := flags.NewNamedParser("urlshortener", flags.Default)
 	parser.AddCommand("api", "Starts url shortener API", "", &cmd.ApiCommand{})
-	parser.AddCommand("start", "Starts url shortener service", "", &cmd.StartCommand{})
 
 	_, err := parser.Parse()
 	if err != nil {
