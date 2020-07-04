@@ -1,1 +1,4 @@
 docker-compose.yml
+**/aws_access_key_id_variable.json
+**/aws_secret_access_key_id_variable.json
+**/.terraform

@@ -1,0 +1,21 @@
+{
+    "data": {
+      "type":"vars",
+      "attributes": {
+        "key":"AWS_ACCESS_KEY_ID",
+        "value":"PUT HERE YOUR CREDENTIAL",
+        "description":"AWS access key id",
+        "category":"env",
+        "hcl":false,
+        "sensitive":true
+      },
+      "relationships": {
+        "workspace": {
+          "data": {
+            "id":"ws-UHe9ZVUo59VP31gW",
+            "type":"workspaces"
+          }
+        }
+      }
+    }
+  }
