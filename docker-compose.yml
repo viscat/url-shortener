@@ -11,3 +11,4 @@ services:
       - URLSHORTENER_LOG_DIR=/var/log/urlshortener
     volumes:
       - ./:/go/src/urlshortener
+    tty: true

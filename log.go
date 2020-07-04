@@ -1,10 +1,11 @@
 package main
 
 import (
-	log "github.com/Sirupsen/logrus"
-	"github.com/rifflock/lfshook"
 	"os"
 	"path/filepath"
+
+	"github.com/rifflock/lfshook"
+	log "github.com/sirupsen/logrus"
 )
 
 // Initializes log
@@ -21,10 +22,11 @@ func initLogger(verbosity bool) {
 		FullTimestamp:   true}
 	log.SetFormatter(formatter)
 
-	hook := lfshook.NewHook(lfshook.PathMap{
+	pathMap := lfshook.PathMap{
 		log.InfoLevel:  createLogFile("info.log"),
 		log.ErrorLevel: createLogFile("error.log"),
-	})
+	}
+	hook := lfshook.NewHook(pathMap, formatter)
 	hook.SetFormatter(formatter)
 	log.AddHook(hook)
 }
