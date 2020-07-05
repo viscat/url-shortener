@@ -8,7 +8,7 @@ terraform {
     organization = "viscat"
 
     workspaces {
-      
+
       name = "sandbox-platform"
     }
 

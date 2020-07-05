@@ -1,3 +1,3 @@
 locals {
-    name = "sandbox-platform"
+  name = "sandbox-platform"
 }
