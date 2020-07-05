@@ -3,4 +3,5 @@ module "ecs_cluster" {
   version = "1.0.0"
 
   name = local.name
+  capacity_providers = ["FARGATE_SPOT"]
 }
