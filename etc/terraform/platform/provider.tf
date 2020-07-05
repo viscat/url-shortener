@@ -1,7 +1,6 @@
 provider "aws" {
   region  = var.region
   version = "~> 2"
-  profile = "personal"
 }
 
 provider "tfe" {
