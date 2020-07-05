@@ -4,6 +4,6 @@ provider "aws" {
 }
 
 provider "tfe" {
-  token    = var.tfe_token
-  version  = "~> 0.15.0"
+  token   = var.tfe_token
+  version = "~> 0.15.0"
 }
